@@ -248,7 +248,9 @@ export default function Home() {
             <FiArrowRight className="transition-transform group-hover:translate-x-1" />
           </a>
           <a
-            href="/Tolulope_Olonibua_CV.docx"
+            href="/Tolulope-Olonibua-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="focus-ring inline-flex items-center gap-2 rounded-full border border-default px-6 py-3 text-sm font-medium transition-colors hover:border-hover hover:bg-background-secondary"
           >
             Download CV

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
-    url: "https://tolulope.dev",
+    url: "https://www.olonibua.site",
     siteName: "Tolulope Olonibua",
     images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: TITLE }],
     locale: "en_GB",
