@@ -1,66 +1,66 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/contexts/theme-context";
 
-const poppins = Poppins({ 
+const inter = Inter({
   subsets: ["latin"],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-poppins',
-  display: 'swap',
+  variable: "--font-inter",
+  display: "swap",
 });
 
-const inter = Inter({ 
+const fraunces = Fraunces({
   subsets: ["latin"],
-  variable: '--font-inter',
-  display: 'swap',
+  weight: ["300", "400", "500", "600"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
+  display: "swap",
 });
+
+const TITLE = "Tolulope Olonibua — Front-End Engineer";
+const DESCRIPTION =
+  "Front-end engineer building fast, accessible web applications with React, TypeScript and Next.js. UK-based, full right to work.";
+const OG_IMAGE = "/WhatsApp Image 2025-08-07 at 08.54.12.jpeg";
 
 export const viewport: Viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#000000' }
+    { media: "(prefers-color-scheme: light)", color: "#fbfbf9" },
+    { media: "(prefers-color-scheme: dark)", color: "#0c0c0d" },
   ],
-  colorScheme: 'light dark',
-}
+  colorScheme: "light dark",
+};
 
 export const metadata: Metadata = {
-  title: "Tolulope Olonibua - Full Stack Developer",
-  description: "Full Stack Developer specializing in modern web technologies. Building exceptional digital experiences with React, Next.js, and TypeScript.",
-  keywords: "Full Stack Developer, React, Next.js, TypeScript, Web Development, Frontend, Backend, Remote Developer, UK Developer",
+  title: TITLE,
+  description: DESCRIPTION,
+  keywords:
+    "Front-End Engineer, Front-End Developer, React, Next.js, TypeScript, Web Development, UK Developer, Manchester Developer",
   authors: [{ name: "Tolulope Olonibua" }],
   creator: "Tolulope Olonibua",
   publisher: "Tolulope Olonibua",
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    apple: '/WhatsApp Image 2025-08-07 at 08.54.12.jpeg',
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: OG_IMAGE,
   },
   openGraph: {
-    title: "Tolulope Olonibua - Full Stack Developer",
-    description: "Full Stack Developer specializing in modern web technologies. Building exceptional digital experiences with React, Next.js, and TypeScript.",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://tolulope.dev",
-    siteName: "Tolulope Olonibua Portfolio",
-    images: [
-      {
-        url: "/WhatsApp Image 2025-08-07 at 08.54.12.jpeg",
-        width: 400,
-        height: 400,
-        alt: "Tolulope Olonibua - Full Stack Developer",
-      },
-    ],
+    siteName: "Tolulope Olonibua",
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: TITLE }],
     locale: "en_GB",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Tolulope Olonibua - Full Stack Developer",
-    description: "Full Stack Developer specializing in React, Next.js, and modern web technologies.",
-    images: ["/WhatsApp Image 2025-08-07 at 08.54.12.jpeg"],
+    title: TITLE,
+    description: DESCRIPTION,
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,
@@ -87,7 +87,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         <meta name="format-detection" content="telephone=no" />
       </head>
-      <body className={`${poppins.variable} ${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${fraunces.variable} antialiased`}>
         <ThemeProvider>
           <div className="relative min-h-screen bg-background-primary text-text-primary">
             {children}

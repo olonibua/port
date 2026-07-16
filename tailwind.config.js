@@ -30,8 +30,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-poppins)', 'Poppins', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['var(--font-fraunces)', 'Georgia', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
