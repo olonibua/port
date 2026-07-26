@@ -28,13 +28,13 @@ const experience = [
     tech: ["React", "TypeScript", "Node.js", "Agile"],
   },
   {
-    company: "MTN",
-    role: "Full-Stack Developer — Contract",
-    period: "Apr 2025 — Jul 2025",
+    company: "MTN Nigeria",
+    role: "Frontend Developer — Contract",
+    period: "Apr 2025 — Jul 2026",
     location: "Remote",
     summary:
-      "Delivered full-stack features for one of Africa's largest telecoms — React on the front end, NestJS/Node APIs and payment integrations at scale.",
-    tech: ["React", "NestJS", "Node.js", "APIs"],
+      "Delivered features across two to three concurrent product squads at one of Africa's largest telecom operators. Built a reusable component library that cut feature development time, applied SOLID principles across React implementations, and tested to a 100% pass rate before release.",
+    tech: ["React", "Next.js", "NestJS", "TypeScript"],
   },
   {
     company: "Crypto University",
@@ -59,7 +59,13 @@ const experience = [
 const skillGroups = [
   {
     label: "Core",
-    items: ["React", "Next.js", "TypeScript", "JavaScript (ES6+)"],
+    items: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "React Native",
+    ],
   },
   {
     label: "Interface",
@@ -67,20 +73,54 @@ const skillGroups = [
       "HTML5",
       "CSS3",
       "Tailwind CSS",
+      "SCSS / Sass",
       "Framer Motion",
       "Storybook",
       "Design systems",
-      "Accessibility",
+      "Accessibility (WCAG)",
       "Responsive design",
     ],
   },
   {
     label: "Back-end & data",
-    items: ["Node.js", "NestJS", "REST APIs", "WebSockets", "PostgreSQL", "Firebase"],
+    items: [
+      "Node.js",
+      "NestJS",
+      "Express",
+      "REST APIs",
+      "GraphQL",
+      "WebSockets",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "Redis",
+    ],
+  },
+  {
+    label: "AI & platforms",
+    items: [
+      "AI / LLM integration",
+      "OpenAI & Anthropic APIs",
+      "Vite",
+      "Gatsby",
+      "WordPress",
+      "Shopify",
+      "Headless CMS",
+    ],
   },
   {
     label: "Ways of working",
-    items: ["Git", "Agile / Scrum", "Code review", "SOLID", "Testing", "Performance"],
+    items: [
+      "Git & GitHub",
+      "CI/CD",
+      "Testing (Jest, RTL)",
+      "Sentry",
+      "Agile / Scrum",
+      "Code review",
+      "SOLID",
+      "Performance",
+    ],
   },
 ];
 
@@ -404,7 +444,7 @@ export default function Home() {
 
         {/* SKILLS */}
         <Reveal className="mt-8">
-          <div className="grid grid-cols-1 gap-8 rounded-xl border border-default p-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-8 rounded-xl border border-default p-8 sm:grid-cols-2 lg:grid-cols-5">
             {skillGroups.map((g) => (
               <div key={g.label}>
                 <div className="kicker mb-4">{g.label}</div>
