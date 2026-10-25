@@ -4,6 +4,7 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  allowedDevOrigins: ['*.lightsprint.ai', '*.e2b.app'],
   images: {
     domains: ['localhost'],
     formats: ['image/webp', 'image/avif'],
